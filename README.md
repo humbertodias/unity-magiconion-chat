@@ -25,4 +25,4 @@ graph LR;
         chat.client -->|Requests| chat.server
         chat.unity-client -->|Requests| chat.server
     end
-```
+```
