@@ -1,9 +1,16 @@
 build:
 	dotnet build
+	make rm-obj
+
+rm-obj:
+	find . -type d \( -name "obj" \) -depth -execdir rm -rf {} \;
+	
+rm-bin:
+	find . -type d \( -name "bin" \) -depth -execdir rm -rf {} \;
 
 clean:
 	dotnet clean
-	find . -type d \( -name "bin" -o -name "obj" \) -depth -execdir rm -rf {} \;
+	make rm-obj rm-bin
 
 docker:
 	DOCKER_DEFAULT_PLATFORM=linux/amd64 \

@@ -1,4 +1,5 @@
+
 public static class SystemConstants
-{
-    public const string ServerUrl = "http://localhost:5000";
-}
+    {
+        public const string ServerUrl = "http://localhost:5000";
+    }

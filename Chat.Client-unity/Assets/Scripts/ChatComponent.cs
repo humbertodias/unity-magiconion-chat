@@ -1,11 +1,11 @@
 using System;
 using System.Threading.Tasks;
+using Chat.Shared;
 using Grpc.Core;
 using Grpc.Net.Client;
 using MagicOnion.Client;
 using UnityEngine;
 using UnityEngine.UI;
-using Button = UnityEngine.UIElements.Button;
 
 public class ChatComponent : MonoBehaviour
 {
@@ -21,7 +21,7 @@ public class ChatComponent : MonoBehaviour
     async void Start()
     {
         await this.InitializeClientAsync();
-        // this.InitializeUi();
+        this.InitializeUi();
     }
 
 
@@ -31,7 +31,7 @@ public class ChatComponent : MonoBehaviour
         // shutdownCancellation.Cancel();
         //
         // if (this.streamingClient != null) await this.streamingClient.DisposeAsync();
-        // if (this.channel != null) await this.channel.ShutdownAsync();
+        if (this.channel != null) await this.channel.ShutdownAsync();
     }
     
     
@@ -62,5 +62,32 @@ public class ChatComponent : MonoBehaviour
 
         this.client = MagicOnionClient.Create<IChatService>(this.channel);
     }
+    
+    private void InitializeUi()
+    {
+//        this.isJoin = false;
+
+//        this.SendMessageButton.interactable = false;
+//        this.ChatText.text = string.Empty;
+        this.Input.text = string.Empty;
+        this.Input.placeholder.GetComponent<Text>().text = "Please enter your name.";
+        // this.JoinOrLeaveButtonText.text = "Enter the room";
+        // this.ExceptionButton.interactable = false;
+    }
+    
+    public async void SendMessage()
+    {
+        // if (!this.isJoin)
+        //     return;
+
+        var message = new ChatMessage
+        {
+            UserName = "TODO",
+            Message = Input.text
+        };
+        await this.client.SendReportAsync(message);
+
+        this.Input.text = string.Empty;
+    }    
 
 }
