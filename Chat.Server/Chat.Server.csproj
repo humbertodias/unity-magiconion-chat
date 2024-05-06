@@ -12,6 +12,7 @@
   <ItemGroup>
     <PackageReference Include="Grpc.AspNetCore" Version="2.57.0" />
     <PackageReference Include="MagicOnion.Server" Version="6.1.2" />
+    <PackageReference Include="MagicOnion.Server.HttpGateway" Version="6.1.2" />
     <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="8.0.1" />
   </ItemGroup>
 
