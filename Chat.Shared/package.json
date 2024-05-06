@@ -1,0 +1,7 @@
+{
+    "name": "com.chat.shared.unity",
+    "version": "1.0.0",
+    "displayName": "Chat.Shared.Unity",
+    "description": "Chat.Shared.Unity",
+    "unity": "2019.1"
+  }

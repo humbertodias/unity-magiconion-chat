@@ -2,13 +2,12 @@
 
   <PropertyGroup>
     <TargetFramework>net8.0</TargetFramework>
-    <ImplicitUsings>enable</ImplicitUsings>
-    <Nullable>enable</Nullable>
+    <OutputType>Library</OutputType>
+    <LangVersion>latest</LangVersion>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="MagicOnion.Server" Version="6.1.2" />
-    <PackageReference Include="MessagePack.Annotations" Version="2.5.140" />
+    <PackageReference Include="MagicOnion" Version="6.1.2" />
   </ItemGroup>
   
 </Project>

@@ -9,7 +9,7 @@ Simple Chat using MagicOnion
 ## Modules
 
 * [Client](./Chat.Client/) - Console client
-* [Unity-Client](./Chat.Unity/) - Game client
+* [Client-Unity](./Chat.Client-Unity/) - Game client
 * [Server](./Chat.Server/) - Server and chat logic
 * [Shared](./Chat.Shared/) - Message definition
 

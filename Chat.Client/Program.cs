@@ -1,4 +1,6 @@
-﻿using Chat.Shared;
+﻿using System;
+using System.Threading.Tasks;
+using Chat.Shared;
 using Grpc.Core;
 using Grpc.Net.Client;
 using MagicOnion.Client;
