@@ -22,7 +22,7 @@ graph LR;
     end
 
     subgraph Client
-        chat.client -->|Requests| chat.server
-        chat.unity-client -->|Requests| chat.server
+        chat.client -->|Requests| Internet
+        chat.unity-client -->|Requests| Internet
     end
 ```
